@@ -19,6 +19,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.2.1",
     "vue-template-compiler": "^2.6.11"
   },
@@ -42,5 +44,15 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "npm run lint:fix"
+    ]
+  }
 }
