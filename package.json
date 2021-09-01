@@ -52,7 +52,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,ts}": [
-      "npm run lint:fix"
+      "npm run lint:fix",
+      "git add"
     ]
   }
 }
