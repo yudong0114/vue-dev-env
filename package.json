@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --no-fix",
-    "lint:fix": "vue-cli-service lint"
+    "lint:fix": "vue-cli-service lint",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "vue": "^2.6.11"
@@ -51,9 +53,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,ts}": [
-      "npm run lint:fix",
-      "git add"
+    "*.{js,vue}": [
+      "npm run lint:fix"
     ]
   }
 }
